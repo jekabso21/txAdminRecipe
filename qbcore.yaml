@@ -1,8 +1,8 @@
 $engine: 3
 $onesync: on
-name: QBCore Server by McKleans-Scripts
+name: QBCore Framework
 version: 2.2.4
-author: McKleans-Scripts
+author: JericoFx & Kakarot & Hamy
 description: An advanced FiveM RP framework including jobs, gangs, housing & more!
 
 tasks:
@@ -33,27 +33,15 @@ tasks:
 
   - action: download_file
     path: ./tmp/files/oxmysql.zip
-    url: https://github.com/overextended/oxmysql/releases/download/v2.7.3/oxmysql.zip
+    url: https://github.com/overextended/oxmysql/releases/download/v2.7.5/oxmysql.zip
   - action: unzip
     dest: ./resources/[standalone]
     src: ./tmp/files/oxmysql.zip
-
-  - action: download_file
-    path: ./tmp/menuv.zip
-    url: https://github.com/ThymonA/menuv/releases/download/v1.4.1/menuv_v1.4.1.zip
-  - action: unzip
-    dest: ./resources/[standalone]/menuv
-    src: ./tmp/menuv.zip
 
   - action: download_github
     dest: ./resources/[standalone]/bob74_ipl
     ref: master
     src: https://github.com/qbcore-framework/bob74_ipl
-
-  - action: download_github
-    dest: ./resources/[standalone]/safecracker
-    ref: main
-    src: https://github.com/qbcore-framework/safecracker
 
   - action: download_github
     dest: ./resources/[standalone]/screenshot-basic
@@ -71,19 +59,9 @@ tasks:
     src: https://github.com/qbcore-framework/interact-sound
 
   - action: download_github
-    dest: ./resources/[standalone]/mhacking
-    ref: main
-    src: https://github.com/qbcore-framework/mhacking
-
-  - action: download_github
     dest: ./resources/[standalone]/connectqueue
     ref: master
     src: https://github.com/qbcore-framework/connectqueue
-
-  - action: download_github
-    dest: ./resources/[standalone]/rpemotes
-    ref: master
-    src: https://github.com/TayMcKenzieNZ/rpemotes
 
   - action: download_github
     dest: ./resources/[standalone]/PolyZone
@@ -91,14 +69,9 @@ tasks:
     src: https://github.com/qbcore-framework/PolyZone
 
   - action: download_github
-    dest: ./resources/[standalone]/cdn-fuel
+    dest: ./resources/[standalone]/LegacyFuel
     ref: master
-    src: https://github.com/CodineDev/cdn-fuel
-
-  - action: download_github
-    dest: ./resources/[standalone]/zdiscord
-    ref: master
-    src: https://github.com/zfbx/zdiscord
+    src: https://github.com/qbcore-framework/LegacyFuel
 
   - action: waste_time # prevent github throttling
     seconds: 10
@@ -115,39 +88,9 @@ tasks:
     src: https://github.com/qbcore-framework/qb-radio
 
     # MAPS
-  - action: download_github
-    dest: ./resources/[defaultmaps]/hospital_map
-    ref: main
-    src: https://github.com/qbcore-framework/hospital_map
-
-  - action: download_github
-    dest: ./resources/[defaultmaps]/dealer_map
-    ref: main
-    src: https://github.com/qbcore-framework/dealer_map
-
-  - action: download_github
-    dest: ./resources/[defaultmaps]/[prison_map]
-    ref: main
-    src: https://github.com/qbcore-framework/prison_map
 
   - action: waste_time # prevent github throttling
     seconds: 5
-
-    # OX
-  - action: download_github
-    dest: ./resources/[ox]/ox_target
-    ref: main
-    src: https://github.com/overextended/ox_target
-  
-  - action: download_github
-    dest: ./resources/[ox]/ox_lib
-    ref: main
-    src: https://github.com/overextended/ox_lib
-
-  - action: download_github
-    dest: ./resources/[ox]/ox_doorlock
-    ref: main
-    src: https://github.com/overextended/ox_doorlock
 
   # Downloading QBCore resources
   - action: download_github
@@ -156,42 +99,28 @@ tasks:
     src: https://github.com/qbcore-framework/qb-core
 
   - action: download_github
-    dest: ./resources/[qb]/qb-scoreboard
-    ref: main
-    src: https://github.com/qbcore-framework/qb-scoreboard
-
-  - action: download_github
-    dest: ./resources/[qb]/qb-adminmenu
-    ref: main
-    src: https://github.com/qbcore-framework/qb-adminmenu
-
-  - action: download_github
     dest: ./resources/[qb]/qb-multicharacter
     ref: main
-    src: https://github.com/marcostom32/qb-multicharacter
+    src: https://github.com/qbcore-framework/qb-multicharacter
+
+  - action: download_github
+    dest: ./resources/[qb]/qb-target
+    ref: main
+    src: https://github.com/qbcore-framework/qb-target
 
   - action: download_github
     dest: ./resources/[qb]/qb-vehiclesales
     ref: main
     src: https://github.com/qbcore-framework/qb-vehiclesales
 
-  - action: download_github
-    dest: ./resources/[qb]/qb-vehicleshop
-    ref: main
-    src: https://github.com/qbcore-framework/qb-vehicleshop
-
-  - action: download_github
-    dest: ./resources/[qb]/qb-houserobbery
-    ref: main
-    src: https://github.com/qbcore-framework/qb-houserobbery
 
   - action: waste_time # prevent github throttling
     seconds: 10
 
   - action: download_github
-    dest: ./resources/[qb]/qb-atms
+    dest: ./resources/[qb]/qb-hud
     ref: main
-    src: https://github.com/qbcore-framework/qb-atms
+    src: https://github.com/qbcore-framework/qb-hud
 
   - action: download_github
     dest: ./resources/[qb]/qb-management
@@ -199,29 +128,19 @@ tasks:
     src: https://github.com/qbcore-framework/qb-management
 
   - action: download_github
-    dest: ./resources/[qb]/qb-weed
+    dest: ./resources/[qb]/qb-inventory
     ref: main
-    src: https://github.com/qbcore-framework/qb-weed
+    src: https://github.com/qbcore-framework/qb-inventory
 
   - action: download_github
-    dest: ./resources/[qb]/qb-lapraces
+    dest: ./resources/[qb]/qb-houses
     ref: main
-    src: https://github.com/qbcore-framework/qb-lapraces
+    src: https://github.com/qbcore-framework/qb-houses
 
   - action: download_github
     dest: ./resources/[qb]/qb-garages
     ref: main
-    src: https://github.com/JonasDev17/qb-garages
-
-  - action: download_github
-    dest: ./resources/[qb]/qb-ambulancejob
-    ref: main
-    src: https://github.com/qbcore-framework/qb-ambulancejob
-
-  - action: download_github
-    dest: ./resources/[qb]/qb-vehiclefailure
-    ref: main
-    src: https://github.com/qbcore-framework/qb-vehiclefailure
+    src: https://github.com/qbcore-framework/qb-garages
 
   - action: waste_time # prevent github throttling
     seconds: 10
@@ -229,12 +148,7 @@ tasks:
   - action: download_github
     dest: ./resources/[qb]/qb-radialmenu
     ref: main
-    src: https://github.com/djjackYT/qb-radialmenu-npstyle
-
-  - action: download_github
-    dest: ./resources/[qb]/qb-crypto
-    ref: main
-    src: https://github.com/qbcore-framework/qb-crypto
+    src: https://github.com/qbcore-framework/qb-radialmenu
 
   - action: download_github
     dest: ./resources/[qb]/qb-weathersync
@@ -247,6 +161,11 @@ tasks:
     src: https://github.com/qbcore-framework/qb-policejob
 
   - action: download_github
+    dest: ./resources/[qb]/qb-traphouse
+    ref: main
+    src: https://github.com/qbcore-framework/qb-traphouse
+
+  - action: download_github
     dest: ./resources/[qb]/qb-apartments
     ref: main
     src: https://github.com/qbcore-framework/qb-apartments
@@ -256,15 +175,7 @@ tasks:
     ref: main
     src: https://github.com/qbcore-framework/qb-vehiclekeys
 
-  - action: download_github
-    dest: ./resources/[qb]/qb-mechanicjob
-    ref: main
-    src: https://github.com/qbcore-framework/qb-mechanicjob
 
-  - action: download_github
-    dest: ./resources/[qb]/qb-vineyard
-    ref: main
-    src: https://github.com/qbcore-framework/qb-vineyard
 
   - action: waste_time # prevent github throttling
     seconds: 10
@@ -274,30 +185,6 @@ tasks:
     ref: main
     src: https://github.com/qbcore-framework/qb-weapons
 
-  - action: download_github
-    dest: ./resources/[qb]/qb-scrapyard
-    ref: main
-    src: https://github.com/qbcore-framework/qb-scrapyard
-
-  - action: download_github
-    dest: ./resources/[qb]/qb-tunerchip
-    ref: main
-    src: https://github.com/qbcore-framework/qb-tunerchip
-
-  - action: download_github
-    dest: ./resources/[qb]/qb-towjob
-    ref: main
-    src: https://github.com/qbcore-framework/qb-towjob
-
-  - action: download_github
-    dest: ./resources/[qb]/qb-streetraces
-    ref: main
-    src: https://github.com/qbcore-framework/qb-streetraces
-
-  - action: download_github
-    dest: ./resources/[qb]/qb-storerobbery
-    ref: main
-    src: https://github.com/qbcore-framework/qb-storerobbery
 
   - action: download_github
     dest: ./resources/[qb]/qb-spawn
@@ -314,83 +201,22 @@ tasks:
     ref: main
     src: https://github.com/qbcore-framework/qb-smallresources
 
-  - action: download_github
-    dest: ./resources/[qb]/qb-recyclejob
-    ref: main
-    src: https://github.com/qbcore-framework/qb-recyclejob
 
-  - action: download_github
-    dest: ./resources/[qb]/qb-diving
-    ref: main
-    src: https://github.com/qbcore-framework/qb-diving
 
-  - action: download_github
-    dest: ./resources/[qb]/qb-cityhall
-    ref: main
-    src: https://github.com/qbcore-framework/qb-cityhall
-
-  - action: download_github
-    dest: ./resources/[qb]/qb-truckrobbery
-    ref: main
-    src: https://github.com/qbcore-framework/qb-truckrobbery
-
-  - action: download_github
-    dest: ./resources/[qb]/qb-pawnshop
-    ref: main
-    src: https://github.com/qbcore-framework/qb-pawnshop
-
-  - action: download_github
-    dest: ./resources/[qb]/qb-busjob
-    ref: main
-    src: https://github.com/qbcore-framework/qb-busjob
-
-  - action: download_github
-    dest: ./resources/[qb]/qb-newsjob
-    ref: main
-    src: https://github.com/qbcore-framework/qb-newsjob
-
-  - action: download_github
-    dest: ./resources/[scripts]/[Holidayy]/qb-jewelery
-    ref: main
-    src: https://github.com/Holidayy95/qb-jewelery
 
   - action: waste_time # prevent github throttling
     seconds: 10
 
   - action: download_github
-    dest: ./resources/[qb]/qb-bankrobbery
+    dest: ./resources/[qb]/qb-banking
     ref: main
-    src: https://github.com/qbcore-framework/qb-bankrobbery
+    src: https://github.com/qbcore-framework/qb-banking
 
   - action: download_github
-    dest: ./resources/[qb]/qb-truckerjob
+    dest: ./resources/[qb]/qb-clothing
     ref: main
-    src: https://github.com/qbcore-framework/qb-truckerjob
+    src: https://github.com/qbcore-framework/qb-clothing
 
-  - action: download_github
-    dest: ./resources/[qb]/qb-keyminigame
-    ref: main
-    src: https://github.com/qbcore-framework/qb-keyminigame
-
-  - action: download_github
-    dest: ./resources/[qb]/qb-fitbit
-    ref: main
-    src: https://github.com/qbcore-framework/qb-fitbit
-
-  - action: download_github
-    dest: ./resources/[qb]/qb-garbagejob
-    ref: main
-    src: https://github.com/qbcore-framework/qb-garbagejob
-
-  - action: download_github
-    dest: ./resources/[qb]/qb-drugs
-    ref: main
-    src: https://github.com/qbcore-framework/qb-drugs
-
-  - action: download_github
-    dest: ./resources/[qb]/qb-lockpick
-    ref: main
-    src: https://github.com/qbcore-framework/qb-lockpick
 
   - action: download_github
     dest: ./resources/[qb]/qb-interior
@@ -398,293 +224,12 @@ tasks:
     src: https://github.com/qbcore-framework/qb-interior
 
   - action: download_github
-    dest: ./resources/[scripts]/[jixels]/qb-menu
+    dest: ./resources/[qb]/qb-menu
     ref: main
-    src: https://github.com/jimathy/jixel-menu
+    src: https://github.com/qbcore-framework/qb-menu
 
   - action: waste_time # prevent github throttling
     seconds: 10
-
-  - action: download_github
-    dest: ./resources/[scripts]/[jixels]/qb-menu
-    ref: main
-    src: https://github.com/jimathy/qb-input
-  # Scripts
-
-  - action: download_github
-    dest: ./resources/[scripts]/chat
-    ref: main
-    src: https://github.com/Brichka-Dv/chat
-
-  # Redline Studios
-
-  - action: download_github
-    dest: ./resources/[scripts]/[redline-studios]/rs-prison
-    ref: main
-    src: https://github.com/Redline-Studios/rs-prison
-
-  - action: download_github
-    dest: ./resources/[scripts]/[redline-studios]/rs-prison
-    ref: main
-    src: https://github.com/Redline-Studios/rs-prison
-
-  # Project Sloth
-
-  - action: download_github
-    dest: ./resources/[scripts]/[Project-Sloth]/ps-hud
-    ref: main
-    src: https://github.com/Project-Sloth/ps-hud
-
-  - action: download_github
-      dest: ./resources/[scripts]/[Project-Sloth]/ps-housing
-      ref: main
-      src: https://github.com/Project-Sloth/ps-housing
-
-  - action: download_github
-      dest: ./resources/[scripts]/[Project-Sloth]/ps-realtor
-      ref: main
-      src: https://github.com/Project-Sloth/ps-realtor
-
-  - action: download_github
-      dest: ./resources/[scripts]/[Project-Sloth]/ps-mdt
-      ref: main
-      src: https://github.com/Project-Sloth/ps-mdt
-
-  - action: download_github
-      dest: ./resources/[scripts]/[Project-Sloth]/ps-dispatch
-      ref: main
-      src: https://github.com/Project-Sloth/ps-dispatch
-
-  - action: download_github
-      dest: ./resources/[scripts]/[Project-Sloth]/ps-inventory
-      ref: main
-      src: https://github.com/Project-Sloth/ps-inventory
-
-  - action: download_github
-    dest: ./resources/[scripts]/[Project-Sloth]/ps-buffs
-    ref: main
-    src: https://github.com/Project-Sloth/ps-buffs
-
-  - action: download_github
-      dest: ./resources/[scripts]/[Project-Sloth]/ps-ui
-      ref: main
-      src: https://github.com/Project-Sloth/ps-ui
-
-  - action: download_github
-      dest: ./resources/[scripts]/[Project-Sloth]/ps-fuel
-      ref: main
-      src: https://github.com/Project-Sloth/ps-fuel
-
-  - action: download_github
-      dest: ./resources/[scripts]/[Project-Sloth]/ps-camera
-      ref: main
-      src: https://github.com/Project-Sloth/ps-camera
-
-  - action: waste_time # prevent github throttling
-    seconds: 10
-
-  - action: download_github
-      dest: ./resources/[scripts]/[Project-Sloth]/ps-weedplanting
-      ref: main
-      src: https://github.com/Project-Sloth/ps-weedplanting
-
-  - action: download_github
-      dest: ./resources/[scripts]/[Project-Sloth]/ps-multijob
-      ref: main
-      src: https://github.com/Project-Sloth/ps-multijob
-
-  - action: download_github
-    dest: ./resources/[scripts]/[Project-Sloth]/ps-liveries
-    ref: main
-    src: https://github.com/Project-Sloth/ps-liveries
-
-  - action: download_github
-      dest: ./resources/[scripts]/[Project-Sloth]/ps-props
-      ref: main
-      src: https://github.com/Project-Sloth/ps-props
-
-  - action: download_github
-      dest: ./resources/[scripts]/[Project-Sloth]/ps-bling
-      ref: main
-      src: https://github.com/Project-Sloth/ps-bling
-
-  - action: download_github
-      dest: ./resources/[scripts]/[Project-Sloth]/ps-walkingstyle
-      ref: main
-      src: https://github.com/Project-Sloth/ps-walkingstyle
-
-  - action: download_github
-      dest: ./resources/[scripts]/[Project-Sloth]/ps-signrobbery
-      ref: main
-      src: https://github.com/Project-Sloth/ps-signrobbery
-
-  - action: download_github
-      dest: ./resources/[scripts]/[Project-Sloth]/ps-microphone
-      ref: main
-      src: https://github.com/Project-Sloth/ps-microphone
-
-  - action: download_github
-    dest: ./resources/[scripts]/[Project-Sloth]/ps-donator
-    ref: main
-    src: https://github.com/Project-Sloth/ps-donator
-
-  - action: download_github
-      dest: ./resources/[scripts]/[Project-Sloth]/ps-loading
-      ref: main
-      src: https://github.com/Project-Sloth/ps-loading
-
-  # Renewed Scripts
-  
-  - action: download_github
-    dest: ./resources/[scripts]/[renewed-scripts]/qb-phone
-    ref: main
-    src: https://github.com/Renewed-Scripts/qb-phone
-
-  - action: download_github
-    dest: ./resources/[scripts]/[renewed-scripts]/Renewed-Banking
-    ref: main
-    src: https://github.com/Renewed-Scripts/Renewed-Banking
-
-  - action: download_github
-    dest: ./resources/[scripts]/[renewed-scripts]/Renewed-Weaponscarry
-    ref: main
-    src: https://github.com/Renewed-Scripts/Renewed-Weaponscarry
-
-  - action: download_github
-    dest: ./resources/[scripts]/[renewed-scripts]/Renewed-Sirensync
-    ref: main
-    src: https://github.com/Renewed-Scripts/Renewed-Sirensync
-
-  - action: waste_time # prevent github throttling
-    seconds: 10
-
-  # Jixels Scripts
-  
-  - action: download_github
-    dest: ./resources/[scripts]/[jixels]/jim-recycle
-    ref: main
-    src: https://github.com/jimathy/jim-recycle
-
-  - action: download_github
-    dest: ./resources/[scripts]/[jixels]/jim-payments
-    ref: main
-    src: https://github.com/jimathy/jim-payments
-
-  - action: download_github
-    dest: ./resources/[scripts]/[jixels]/jim-mining
-    ref: main
-    src: https://github.com/jimathy/jim-mining
-
-  - action: download_github
-    dest: ./resources/[scripts]/[jixels]/jim-shops
-    ref: main
-    src: https://github.com/jimathy/jim-shops
-
-  - action: download_github
-    dest: ./resources/[scripts]/[jixels]/jim-chairs
-    ref: main
-    src: https://github.com/jimathy/jim-chairs
-
-  - action: download_github
-    dest: ./resources/[scripts]/[jixels]/jim-jobgarage
-    ref: main
-    src: https://github.com/jimathy/jim-jobgarage
-
-  - action: download_github
-    dest: ./resources/[scripts]/[jixels]/jim-djbooth
-    ref: main
-    src: https://github.com/jimathy/jim-djbooth
-
-  - action: download_github
-    dest: ./resources/[scripts]/[jixels]/jim-notepad
-    ref: main
-    src: https://github.com/jimathy/jim-notepad
-
-  - action: download_github
-    dest: ./resources/[scripts]/[jixels]/jim-ElectricSkateboard
-    ref: main
-    src: https://github.com/jimathy/ElectricSkateboard
-
-  - action: download_github
-    dest: ./resources/[scripts]/[Aa-StartFirst]/jim-consumables
-    ref: main
-    src: https://github.com/jimathy/jim-consumables
-
-  # McKleans Scripts
-
-  - action: download_github
-    dest: ./resources/[scripts]/[McKleans-Scripts]/mk-ammoboxes
-    ref: main
-    src: https://github.com/McKleans-Scripts/mk-ammoboxes
-
-  # Illenium Scripts
-
-  - action: download_github
-    dest: ./resources/[scripts]/[clothing]/illenium-appearance
-    ref: main
-    src: https://github.com/iLLeniumStudios/illenium-appearance
-
-  # TNJ Development
-
-  - action: download_github
-    dest: ./resources/[scripts]/[clothing]/qb-masks
-    ref: main
-    src: https://github.com/tnj-development/qb-masks
-
-  - action: download_github
-    dest: ./resources/[scripts]/[tnj-development]/tnj-stealshoes
-    ref: main
-    src: https://github.com/tnj-development/tnj-stealshoes
-
-  - action: waste_time # prevent github throttling
-    seconds: 10
-
-  # Keep Scripts
-
-  - action: download_github
-    dest: ./resources/[scripts]/[keep]/keep-bags
-    ref: main
-    src: https://github.com/swkeep/keep-bags
-
-  - action: download_github
-    dest: ./resources/[scripts]/[keep]/keep-companion
-    ref: main
-    src: https://github.com/swkeep/keep-companion
-
-  - action: download_github
-    dest: ./resources/[scripts]/[keep]/keep-containers
-    ref: main
-    src: https://github.com/swkeep/keep-containers
-
-  - action: download_github
-    dest: ./resources/[scripts]/[keep]/keep-gunrack
-    ref: main
-    src: https://github.com/swkeep/keep-gunrack
-
-
-  # Randol Scripts
-
-  - action: download_github
-    dest: ./resources/[scripts]/[randol]/randol_moneywash
-    ref: main
-    src: https://github.com/Randolio/randol_moneywash
-
-  - action: download_github
-    dest: ./resources/[scripts]/[randol]/randol_paycheck
-    ref: main
-    src: https://github.com/Randolio/randol_paycheck
-
-
-
-
-
-
-
-  - action: waste_time # prevent github throttling
-      seconds: 10
-    
-
-
 
   # Clean up
   - action: remove_path
