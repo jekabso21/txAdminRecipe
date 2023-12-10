@@ -39,7 +39,7 @@ tasks:
     src: ./tmp/files/oxmysql.zip
 
   - action: download_github
-    dest: ./resources/[standalone]/bob74_ipl
+    dest: ./resources/[mapping]/bob74_ipl
     ref: master
     src: https://github.com/qbcore-framework/bob74_ipl
 
